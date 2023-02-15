@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: normal;
+}
+
+#list1 .form-control {
+    border-color: transparent;
+}
+
+#list1 .form-control:focus {
+    border-color: transparent;
+    box-shadow: none;
+}
+
+#list1 .select-input.form-control[readonly]:not([disabled]) {
+    background-color: #fbfbfb;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.hover-overlay:hover {
+    opacity: .7;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
+
+/* custom datepicker */
+.c-btn {
+    text-transform: capitalize;
+    font-weight: 600;
+    display: inline-block;
+    line-height: 36px;
+    cursor: pointer;
+    letter-spacing: .5px;
+    border-radius: 2px;
+    transition: background 200ms ease-in-out;
+}
+.c-btn.c-btn--flat{
+    padding: 0 8px;
+    height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    text-align: center;
+}
+.c-btn--flat {
+    background: transparent;
+    margin: 10px 8px;
+    min-width: 52px;
+    font-size: 14px;
+}
+
+.c-btn--flat:hover.c-btn:hover {
+    background: rgba(153, 153, 153, 0.2);
+    color: #393939;
+}
+.c-btn--flat,
+.c-btn--flat:hover,
+.c-btn--flat:active {
+    box-shadow: none;
+}
+.c-datepicker__header-date{
+    box-sizing: content-box;
+}
+.c-datepicker__clock{
+    box-sizing: content-box;
+}

@@ -1,0 +1,23 @@
+{
+  "name": "test4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duyhieunguyenle1/todolist-testing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duyhieunguyenle1/todolist-testing/issues"
+  },
+  "homepage": "https://github.com/duyhieunguyenle1/todolist-testing#readme",
+  "dependencies": {
+    "material-datepicker": "^0.0.1",
+    "material-datetime-picker": "^2.4.0"
+  }
+}

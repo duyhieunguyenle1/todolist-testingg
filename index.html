@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todolist</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./node_modules/material-datetime-picker/dist/material-datetime-picker.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+
+<body>
+  <section class="vh-100">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col">
+          <div class="card" id="list1" style="border-radius: .75rem; background-color: #eff1f2;">
+            <div class="card-body py-4 px-4 px-md-5">
+
+              <p class="h1 text-center mt-3 mb-4 pb-3 text-primary">
+                <i class="fas fa-check-square me-1"></i>
+                <u>My Todo-s</u>
+              </p>
+
+              <div class="pb-2">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex flex-row align-items-center">
+                      <input type="text" class="form-control form-control-lg" id="exampleFormControlInput1"
+                        placeholder="Add new...">
+                      <a href="#!" data-mdb-toggle="tooltip" title="Set due date" class="c-btn c-datepicker-btn"><i
+                          class="fas fa-calendar-alt fa-lg me-3 mr-2"></i></a>
+                      <div class="btn_add">
+                        <button type="button" class="btn btn-primary">Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <hr class="my-4">
+
+              <div class="d-flex justify-content-end align-items-center mb-4 pt-2 pb-1">
+                <div class="d-flex align-items-center mr-4">
+                  <p class="small mb-0 me-2 text-muted mr-2">Filter</p>
+                  <select class="select filterSelect">
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="active">Active</option>
+                    <option value="due-date">Has due date</option>
+                  </select>
+                </div>
+                <div class="d-flex align-items-center mr-4">
+                  <p class="small mb-0 ms-4 me-2 text-muted mr-2">Sort</p>
+                  <select class="select">
+                    <option value="1">Added date</option>
+                    <option value="2">Due date</option>
+                  </select>
+                </div>
+                <a href="#!" style="color: #23af89;" data-mdb-toggle="tooltip" title="Ascending"><i
+                    class="fas fa-sort-amount-down-alt ms-2 hover-overlay"></i></a>
+              </div>
+              <ul class="task_list">
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rome/2.1.22/rome.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js"></script>
+  <script src="./node_modules/material-datetime-picker/dist/material-datetime-picker.js" charset="utf-8"></script>
+  <script>
+
+    const picker = new MaterialDatetimePicker({})
+      .on('submit', (val) => dueDate(val._d))
+
+    const el = document.querySelector('.c-datepicker-btn');
+    el.addEventListener('click', () => {
+      picker.open();
+    }, false);
+
+  </script>
+</body>
+
+</html>
